@@ -1,0 +1,60 @@
+
+{
+  "info": {
+    "name": "Student Management API",
+    "description": "Postman collection for my FastAPI project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Welcome",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/"
+      }
+    },
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/students"
+      }
+    },
+    {
+      "name": "Get Student by ID",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/students/1"
+      }
+    },
+    {
+      "name": "Filter Students",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/students?department=CSE"
+      }
+    },
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 4,\n  \"name\": \"Karim\",\n  \"age\": 23,\n  \"department\": \"CSE\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://127.0.0.1:8000/students"
+      }
+    }
+  ]
+}
